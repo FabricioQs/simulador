@@ -28,3 +28,11 @@ function calcularCuotaMensual(total, plazoAnios){
     let cuotaMensual = total/totalMeses;
     return cuotaMensual;
 }
+
+function determinarAprobacion(cuotaMensual, capacidadPago){
+    if (cuotaMensual <= capacidadPago){
+        return "APROBADO";
+    } else {
+        return "RECHAZADO";
+    }
+}

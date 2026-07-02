@@ -20,6 +20,9 @@ function calcular (){
 
     let cuota = calcularCuotaMensual(totalPagar,plazoAnios);
      document.getElementById("spnCuotaMensual").innerText="USD " +  cuota.toFixed(2);
+
+    let estado = determinarAprobacion(cuota,capacidad);
+    document.getElementById("spnEstadoCredito").innerText = estado;
     
 }
 
