@@ -14,6 +14,10 @@ function calcular (){
 
     let interes = calcularInteresSimple(monto,tasa,plazoAnios);
     document.getElementById("spnInteresPagar").innerText="USD " +  interes.toFixed(2);
+
+    let totalPagar = calcularTotalPagar(monto, interes);
+    document.getElementById("spnTotalPrestamo").innerText="USD " +  totalPagar.toFixed(2);
+    
 }
 
 document.getElementById("btnCalcularCredito").onclick = calcular;
