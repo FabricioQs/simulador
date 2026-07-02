@@ -6,5 +6,9 @@ function calcularDisponible (ingresos, egresos){
     } else {
         return resultado; // Si es positivo, retorna el valor real
     }
+}
 
+function calcularCapacidadPago(montoDisponible){
+    let capacidadPago = montoDisponible*0.50;
+    return capacidadPago;
 }
