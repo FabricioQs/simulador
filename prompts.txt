@@ -1,0 +1,15 @@
+Actua como un diseñador grafíco experto.
+agrega esta imagen al html es mi logo. esta guarda en una carpeta "img" y el archivo se llama "logo".
+necesito que hagas mi pagina responsive (que se vea perfecta en celulares y tablets).
+reglas importantes:
+solo HTML y CSS
+no toques los IDs: no cambies ni borres ningún de los componentes, los necesito para mi código.
+buen gusto: como diseñador, asegúrate de que los espectos sean elegantes y llamativos y sea una pagina intuitiva. ve el mejor tono colores para la pagina segun la imagen que te comparti.
+--------------------------------------------------------------------
+Agrega efectos visuales y notorios que tenga fluidez
+----------------------------------------------------------
+Vamos a crear un fondo de pantalla para computadora y celular para agregarlo como fondo de pantalla, actualmente se mira de esta manera pero me gustaria un fondo de pantalla que se vea bien con lo que creamos
+------------------------------------------------------------------
+osea no, te mostre el logo y el resultado de como se esta mirando. ahora tu trabajo es crear un fondo que se adapte a todo eso te lo dejo a tu imaginación.
+-----------------------
+Agrega este fondo de pantalla esta en la carpeta img y se llama fondo.

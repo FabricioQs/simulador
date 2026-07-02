@@ -1,70 +1,264 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
+/* --- Variables de Diseño y Color basados en el Logo --- */
+:root {
+    --bg-main: #0b0f19; /* Mantengo este como respaldo y color base */
+    --bg-card: rgba(20, 26, 44, 0.65);
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --text-primary: #f3f4f6;
+    --text-muted: #9ca3af;
+    
+    /* Gradiente del isotipo */
+    --color-cyan: #00d2ff;
+    --color-magenta: #ff007f;
+    --color-orange: #ff9900;
+    --gradient-accent: linear-gradient(135deg, var(--color-cyan), var(--color-magenta));
 }
 
-.container {
-    width: 400px;
-    margin: 40px auto;
+/* --- Estilos Generales con la Imagen de Fondo --- */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* --- INICIO: LÍNEAS PARA AGREGAR EL FONDO --- */
+    background-image: url('img/fondo.png'); /* Ruta a tu imagen */
+    background-size: cover;                /* Cubre toda la pantalla */
+    background-position: center;           /* Centra la imagen */
+    background-repeat: no-repeat;          /* Evita que se repita */
+    background-attachment: fixed;          /* El fondo se queda fijo al hacer scroll */
+    background-color: var(--bg-main);       /* Color de respaldo si la imagen falla */
+    /* --- FIN: LÍNEAS PARA AGREGAR EL FONDO --- */
+
+    margin: 0;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* --- Contenedor Principal (Responsivo y Glassmorphism) --- */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    border-radius: 24px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    
+    /* Asegurar que la tarjeta sobresalga del fondo */
+    position: relative;
+    z-index: 10;
+}
+
+/* --- Identidad Visual (Logo) --- */
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.brand-logo {
+    max-width: 180px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 210, 255, 0.2));
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
 }
 
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
+/* --- Secciones y Formularios --- */
+.form-section {
+    border: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.form-section legend {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-cyan);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group-row .input-group {
+    flex: 1;
 }
 
 label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 500;
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--text-primary);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
     box-sizing: border-box;
+    width: 100%;
 }
 
-p {
+input:focus {
+    border-color: var(--color-cyan);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.15);
+}
+
+/* --- Grillas de Resultados --- */
+.results-grid {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 12px 16px;
     margin-top: 10px;
 }
 
-span {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.buttons {
-    margin-top: 20px;
+.results-grid p {
+    margin: 8px 0;
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.results-grid span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Resaltado especial para la cuota final */
+.visual-summary p:last-of-type {
+    border-top: 1px solid var(--border-glass);
+    padding-top: 8px;
+    margin-top: 8px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.visual-summary p:last-of-type span {
+    color: var(--color-orange);
+    font-size: 16px;
+}
+
+/* --- Indicador de Estado Dinámico --- */
+.status-box {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--border-glass);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+}
+
+.status-box p {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+#spnEstadoCredito {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: inline-block;
+    color: var(--color-cyan);
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+
+/* --- Botones de Control --- */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 button {
-    width: 48%;
-    padding: 10px;
+    flex: 1;
+    padding: 14px;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-button:hover {
-    background-color: #2980b9;
+.btn-primary {
+    background: var(--gradient-accent);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 127, 0.35);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border: 1px solid var(--border-glass);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* --- Adaptabilidad (Media Queries) --- */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        /* En pantallas muy pequeñas, quizás prefieras que el fondo no sea fijo */
+        /* background-attachment: scroll; */
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
 }

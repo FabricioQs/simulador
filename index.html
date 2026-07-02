@@ -9,36 +9,69 @@
 <body>
 
     <div class="container">
+        <!-- Contenedor del Logo de FabriTekhx -->
+        <div class="logo-container">
+            <img src="img/logo.png" alt="FabriTekhx Logo" class="brand-logo">
+        </div>
+
         <h1>Simulador de Crédito</h1>
 
-        <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos">
+        <!-- Sección Datos Financieros -->
+        <fieldset class="form-section">
+            <legend>Datos financieros</legend>
+            
+            <div class="input-group">
+                <label for="txtIngresos">Ingresos</label>
+                <input type="text" id="txtIngresos" placeholder="Ej. 1000.00">
+            </div>
 
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos">
+            <div class="input-group">
+                <label for="txtEgresos">Egresos</label>
+                <input type="text" id="txtEgresos" placeholder="Ej. 600.00">
+            </div>
 
-        <p>Disponible: <span id="spnDisponible"></span></p>
-        <p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
+            <div class="results-grid">
+                <p>Disponible: <span id="spnDisponible">USD 0.00</span></p>
+                <p>Capacidad de pago: <span id="spnCapacidadPago">USD 0.00</span></p>
+            </div>
+        </fieldset>
 
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto">
+        <!-- Sección Solicitud de Crédito -->
+        <fieldset class="form-section">
+            <legend>Solicitud de crédito</legend>
+            
+            <div class="input-group">
+                <label for="txtMonto">Monto solicitado</label>
+                <input type="text" id="txtMonto" placeholder="Ej. 2000">
+            </div>
 
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo">
+            <div class="input-group-row">
+                <div class="input-group">
+                    <label for="txtPlazo">Plazo (Años)</label>
+                    <input type="text" id="txtPlazo" placeholder="Ej. 1">
+                </div>
+                <div class="input-group">
+                    <label for="txtTasaInteres">Tasa Interés (%)</label>
+                    <input type="text" id="txtTasaInteres" placeholder="Ej. 10">
+                </div>
+            </div>
 
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres">
+            <div class="results-grid visual-summary">
+                <p>Interés a pagar: <span id="spnInteresPagar">USD 0.00</span></p>
+                <p>Total préstamo: <span id="spnTotalPrestamo">USD 0.00</span></p>
+                <p>Cuota mensual: <span id="spnCuotaMensual">USD 0.00</span></p>
+            </div>
 
-        <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
-        <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>
-        <p>Cuota mensual: <span id="spnCuotaMensual"></span></p>
-        <p>Estado de crédito: <span id="spnEstadoCredito">ANALIZANDO...</span></p>
+            <div class="status-box">
+                <p>Estado del crédito</p>
+                <span id="spnEstadoCredito">ANALIZANDO...</span>
+            </div>
+        </fieldset>
 
+        <!-- Botonera -->
         <div class="buttons">
-            <button id="btnCalcularCredito">Calcular Crédito</button>
-            <button id="btnReiniciar">Reiniciar</button>
+            <button id="btnCalcularCredito" class="btn-primary">Calcular Crédito</button>
+            <button id="btnReiniciar" class="btn-secondary">Reiniciar</button>
         </div>
     </div>
 
