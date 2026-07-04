@@ -1,0 +1,22 @@
+PROMPT 1 
+(Definición de Reglas y Estructura HTML/CSS):
+
+"Actúa como un Ingeniero de Software Frontend experto. Necesito agregar validaciones estrictas a mi formulario de simulación de crédito. Las validaciones deben ejecutarse únicamente al hacer clic en el botón 'Calcular Crédito'. Si un campo no cumple las reglas, debe aparecer un mensaje de error específico directamente debajo de dicho input. Configura el HTML añadiendo etiquetas <span> de error controladas por clases de CSS, usando transiciones fluidas de opacidad y transformación, y una alerta visual con tono magenta eléctrico para mantener la consistencia con la identidad corporativa y la estética Dark Tech/Glassmorphism previa."
+----------------------------------------------------------------------------
+PROMPT 2 
+(Lógica JavaScript de Interrupción y Validación):
+"Genera la lógica en JavaScript para interceptar el evento del botón calcular. Antes de realizar cualquier cálculo matemático, el script debe:
+1. Limpiar los estilos de error e indicaciones de ejecuciones previas.
+2. Validar que 'Ingresos' y 'Egresos' sean números mayores o iguales a cero.
+3. Validar que el 'Monto' sea un entero entre USD 500 y USD 50,000.
+4. Validar que el 'Plazo' sea estrictamente un entero entre 1 y 30 años.
+5. Validar que la 'Tasa de Interés' esté en un rango del 1% al 35%.
+Si alguna regla falla, inyecta el texto descriptivo del error debajo del campo correspondiente, añade una clase visual de error al input, y ejecuta un 'return' prematuro para bloquear por completo los cálculos del simulador."
+--------------------------------------------------------------------------
+PROMPT 3
+(Correciones)
+Vamos hacer unas correciones, si esta bien pero al momento de escribir no me amostraba nada y me dejaba llenar. la idea es que se refleje o te bote un mensaje de advertencia cuando voy escribiendo y no en el momento de dar click. sino cuando voy construyendo.
+----------------------------------------
+Prompt 4
+(Errores)
+Acabo de encontrar un error, al momento de ingresar letras y números la calculadora permite hacer el proceso como puedes observar en la imagen, busca todos los bugs que pueden existir. y arreglalos para que al final quede bien y sin errores

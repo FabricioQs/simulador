@@ -262,3 +262,35 @@ button:active {
         width: 100%;
     }
 }
+
+/* --- Mensajes de Error de Alta Tecnología --- */
+.error-msg {
+    color: var(--color-magenta);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 6px;
+    display: block;
+    min-height: 16px; /* Evita que el contenedor salte bruscamente */
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+/* Cuando el error esté activo */
+.error-msg.active {
+    opacity: 1;
+    transform: translateY(0);
+    animation: pulseGlowError 1.5s infinite ease-in-out;
+}
+
+/* Input con borde de advertencia si está errado */
+input.input-error {
+    border-color: var(--color-magenta) !important;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.2) !important;
+}
+
+@keyframes pulseGlowError {
+    0% { text-shadow: 0 0 5px rgba(255, 0, 127, 0.2); }
+    50% { text-shadow: 0 0 10px rgba(255, 0, 127, 0.5); }
+    100% { text-shadow: 0 0 5px rgba(255, 0, 127, 0.2); }
+}

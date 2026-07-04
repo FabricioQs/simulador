@@ -23,11 +23,13 @@
             <div class="input-group">
                 <label for="txtIngresos">Ingresos</label>
                 <input type="text" id="txtIngresos" placeholder="Ej. 1000.00">
+                <span class="error-msg" id="errIngresos"></span> <!-- Espacio para el error -->
             </div>
 
             <div class="input-group">
                 <label for="txtEgresos">Egresos</label>
                 <input type="text" id="txtEgresos" placeholder="Ej. 600.00">
+                <span class="error-msg" id="errEgresos"></span>
             </div>
 
             <div class="results-grid">
@@ -43,16 +45,19 @@
             <div class="input-group">
                 <label for="txtMonto">Monto solicitado</label>
                 <input type="text" id="txtMonto" placeholder="Ej. 2000">
+                <span class="error-msg" id="errMonto"></span>
             </div>
 
             <div class="input-group-row">
                 <div class="input-group">
                     <label for="txtPlazo">Plazo (Años)</label>
                     <input type="text" id="txtPlazo" placeholder="Ej. 1">
+                    <span class="error-msg" id="errPlazo"></span>
                 </div>
                 <div class="input-group">
                     <label for="txtTasaInteres">Tasa Interés (%)</label>
                     <input type="text" id="txtTasaInteres" placeholder="Ej. 10">
+                    <span class="error-msg" id="errTasaInteres"></span>
                 </div>
             </div>
 
